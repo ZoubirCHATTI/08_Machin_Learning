@@ -64,7 +64,7 @@ Y_test=to_one_hot(test_labels, 46)
 #Creation of a DNN model of training
 model=Sequential()
 model.add(Dense(128, activation='relu'))
-model.add(Dense(64w, activation='relu'))
+model.add(Dense(64, activation='relu'))
 model.add(Dense(46, activation='softmax'))
 
 #Compiling the model
@@ -119,6 +119,7 @@ np.random.shuffle(test_labels_copy)
 
 compare=np.array(test_labels_copy)==np.array(test_labels)
 print(f"random accuracy={compare.mean()}\nModel accuracy={accuracy} ")
+
 
 
 
